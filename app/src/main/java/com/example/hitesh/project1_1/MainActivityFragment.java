@@ -80,6 +80,7 @@ public class MainActivityFragment extends Fragment {
                                 //EditText editText = (EditText) findViewById(R.id.edit_message);
                                 //String message = editText.getText().toString();
                                 intent.putExtra(Intent.EXTRA_TEXT, text);
+                                intent.putExtra("movieinfo", text);
                                 startActivity(intent);
                                 //Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
                             }
