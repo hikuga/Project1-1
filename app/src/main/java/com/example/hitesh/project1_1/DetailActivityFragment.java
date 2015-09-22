@@ -24,7 +24,8 @@ public class DetailActivityFragment extends Fragment {
         Intent intent = getActivity().getIntent();
         if( intent != null && intent.hasExtra(Intent.EXTRA_TEXT)){
             String movieDetails = intent. getStringExtra(Intent.EXTRA_TEXT);
-            ((TextView)v.findViewById(R.id.textView2) ).setText(movieDetails);
+            Movie movie = intent.getExtras().getParcelable("movieinfo");
+            ((TextView)v.findViewById(R.id.textView2) ).setText(movie.getTitle());
         }
         return v;
     }
